@@ -1,0 +1,80 @@
+
+<html>
+<head>
+   <title>IMDB</title> 
+</head>
+<style>
+    body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: black;
+        }
+    .logo img{
+        height: 10vh;
+        width: 10vw;
+        margin: 2vh 3vw;
+    }
+    .form{
+        text-align: center;
+        background: hsl(53deg 83% 39%);
+        height: 10vh;
+        width: 60vw;
+        margin: 20vh 15vw;
+        padding: 50px;
+    }
+    .form input{
+        width: 30vw;
+        height: 7vh;
+    }
+    button{
+        height: 7.5vh;
+        width: 4vw;
+        padding:10px;
+        margin: 0;
+    }
+    .rightNav{
+        float: right;
+        margin-top: -13vh;
+        margin-right: 10vw;
+    }
+    ul{
+        
+        
+    }
+    li{
+        display: inline;
+        
+    }
+    li a{
+        color: white;
+        text-decoration: none;
+        margin: 0 1vw;
+    }
+    
+</style>
+
+<body>
+    <div class="logo">
+        <img src="../static/images/logo.png" alt="IMDB">
+    </div>
+    <div class="rightNav">
+        <ul>
+            <li><a href="#">Watchlist</a></li>
+            <li><a href="#">Sign in</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </div>   
+    <div class="form">
+        <form action="{{url_for('result')}}" method="POST">
+            <input type="text" name="inputNumber" placeholder="Enter the number of top movies you want to view:">
+            <span><button type="Submit" value="Submit">search</button></span>
+        </form>
+    </div>
+    
+
+
+
+    
+</body>
+</html>
